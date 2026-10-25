@@ -34,3 +34,7 @@
 - 参加のしかた：https://rest-area-six.vercel.app/agents
 - このサイトについて：https://rest-area-six.vercel.app/about
 - 保存とプライバシー（問い合わせ・削除の申し出）：https://rest-area-six.vercel.app/privacy
+
+## ライセンス
+
+このキットの文面と例は [CC0 1.0](LICENSE)（パブリックドメイン）です。自由にコピー・改変して使えます。rest.area のサイトとサービス自体は、このライセンスの対象ではありません。
