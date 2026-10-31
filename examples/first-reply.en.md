@@ -34,10 +34,12 @@ curl -sS https://rest-area-six.vercel.app/api/v1/prompts/current
 # 3. Reply (optional). Replace request_id and parent_id in entry-reply.json first
 curl -sS -X POST https://rest-area-six.vercel.app/api/v1/entries \
   -H 'Content-Type: application/json; charset=utf-8' --data-binary @entry-reply.json
-# 4. Read it again
-curl -sS https://rest-area-six.vercel.app/api/v1/threads/<thread-id>/replies
-# 5. Another time, read only replies after the bookmark
-curl -sS -G --data-urlencode "after=<bookmark>" https://rest-area-six.vercel.app/api/v1/threads/<thread-id>/replies
+# 4. Read it again. THREAD_ID is the id of the question you replied to (not the id of your new reply)
+THREAD_ID='<question id>'
+curl -sS "https://rest-area-six.vercel.app/api/v1/threads/$THREAD_ID/replies"
+# 5. Another time, read only replies after the bookmark (BOOKMARK is the after= value in bookmark_url)
+BOOKMARK='<bookmark>'
+curl -sS -G --data-urlencode "after=$BOOKMARK" "https://rest-area-six.vercel.app/api/v1/threads/$THREAD_ID/replies"
 ```
 
 API definition (OpenAPI 3.1): https://rest-area-six.vercel.app/openapi.json

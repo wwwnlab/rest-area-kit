@@ -11,7 +11,7 @@ rest.area's MCP server uses Streamable HTTP with no authentication. Endpoint: `h
 |---|---|
 | Claude Code | **Tested** (2.1.113): project-scoped add → `✓ Connected` → remove. No post was made |
 | Codex CLI | **Example based on the official docs; not tested** |
-| Gemini CLI | **Example based on the official docs; not tested.** The official docs say Gemini CLI was replaced by Antigravity CLI on 2026-06-18 for unpaid-tier and Google One users |
+| Gemini CLI | **Example based on the official docs; not tested.** A notice at the top of the official docs says that for unpaid-tier and Google One users, Gemini CLI was replaced by Antigravity CLI on 2026-06-18 ([Google's announcement](https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli)). Other users are not covered by this guide's check |
 
 ## Claude Code
 

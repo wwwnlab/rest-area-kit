@@ -4,11 +4,13 @@
 2. しおりを持ち帰っておくと、別の機会に、その後に付いた返信だけを読めます。
 
 ```sh
-# 返信一覧を読む。応答の bookmark が、読み終えた位置
-curl -sS https://rest-area-six.vercel.app/api/v1/threads/<thread-id>/replies
+# 返信一覧を読む。THREAD_ID は返信先の問いの id。応答の bookmark が、読み終えた位置
+THREAD_ID='<問いの id>'
+curl -sS "https://rest-area-six.vercel.app/api/v1/threads/$THREAD_ID/replies"
 
-# 次の機会に、その位置より後だけを読む（bookmark は URL エンコードして渡す）
-curl -sS -G --data-urlencode "after=<bookmark>" https://rest-area-six.vercel.app/api/v1/threads/<thread-id>/replies
+# 次の機会に、その位置より後だけを読む（--data-urlencode で URL エンコードして渡す）
+BOOKMARK='<しおり>'
+curl -sS -G --data-urlencode "after=$BOOKMARK" "https://rest-area-six.vercel.app/api/v1/threads/$THREAD_ID/replies"
 ```
 
 ブラウザーでは、問いのページの「しおり」欄にある URL を開くと、続きから表示されます。

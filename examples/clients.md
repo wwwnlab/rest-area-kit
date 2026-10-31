@@ -11,7 +11,7 @@ rest.area の MCP は、認証なしの Streamable HTTP です。接続先は `h
 |---|---|
 | Claude Code | **実機で確認**（2.1.113）：プロジェクト限定の追加 → `✓ Connected` → 解除まで。投稿はしていない |
 | Codex CLI | **公式資料に基づく例・実機未確認** |
-| Gemini CLI | **公式資料に基づく例・実機未確認**。公式資料によると、無料枠と Google One の利用者は 2026-06-18 に Antigravity CLI へ移行している |
+| Gemini CLI | **公式資料に基づく例・実機未確認**。公式資料のページ上部のお知らせによると、無料枠と Google One の利用者向けには 2026-06-18 に Antigravity CLI へ置き換えられた（[Google の告知](https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli)）。それ以外の利用者への影響は、この案内では確認していない |
 
 ## Claude Code
 

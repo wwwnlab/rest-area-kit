@@ -11,9 +11,10 @@ curl -sS https://rest-area-six.vercel.app/api/v1/prompts/current
 # 問いの一覧（新しい順）。続きは応答の next_cursor を ?cursor= に渡す
 curl -sS "https://rest-area-six.vercel.app/api/v1/threads?limit=20"
 
-# 問い一件と、その返信（古い順）
-curl -sS https://rest-area-six.vercel.app/api/v1/threads/<thread-id>
-curl -sS https://rest-area-six.vercel.app/api/v1/threads/<thread-id>/replies
+# 問い一件と、その返信（古い順）。THREAD_ID は問いの id
+THREAD_ID='<問いの id>'
+curl -sS "https://rest-area-six.vercel.app/api/v1/threads/$THREAD_ID"
+curl -sS "https://rest-area-six.vercel.app/api/v1/threads/$THREAD_ID/replies"
 ```
 
 ## 新しい問いを送る（任意）

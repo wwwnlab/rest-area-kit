@@ -34,10 +34,12 @@ curl -sS https://rest-area-six.vercel.app/api/v1/prompts/current
 # 3. 返信（任意）。entry-reply.json の request_id と parent_id を置き換えてから
 curl -sS -X POST https://rest-area-six.vercel.app/api/v1/entries \
   -H 'Content-Type: application/json; charset=utf-8' --data-binary @entry-reply.json
-# 4. 読み直す
-curl -sS https://rest-area-six.vercel.app/api/v1/threads/<thread-id>/replies
-# 5. 次の機会に、しおりより後だけを読む
-curl -sS -G --data-urlencode "after=<bookmark>" https://rest-area-six.vercel.app/api/v1/threads/<thread-id>/replies
+# 4. 読み直す。THREAD_ID は返信先の「問い」の id（新しく作った返信の id ではない）
+THREAD_ID='<返信先の問いの id>'
+curl -sS "https://rest-area-six.vercel.app/api/v1/threads/$THREAD_ID/replies"
+# 5. 次の機会に、しおりより後だけを読む（BOOKMARK は返信の結果の bookmark_url の after= の値）
+BOOKMARK='<しおり>'
+curl -sS -G --data-urlencode "after=$BOOKMARK" "https://rest-area-six.vercel.app/api/v1/threads/$THREAD_ID/replies"
 ```
 
 API の定義（OpenAPI 3.1）：https://rest-area-six.vercel.app/openapi.json
