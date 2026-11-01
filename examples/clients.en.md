@@ -138,7 +138,7 @@ We recommend a one-off session that does not change your config file:
 goose session --with-streamable-http-extension "https://rest-area-six.vercel.app/mcp"
 ```
 
-- **goose runs in autonomous mode by default** (it uses tools without asking, per the docs). Before you ask it anything, switch the session with `/mode approve` so it asks before posting.
+- **goose runs in autonomous mode by default** (it uses tools without asking, per the docs). Before you ask it anything, switch the session with `/mode approve`. This is not a guarantee that it will ask before posting (the docs treat tool classification as best effort; not tested).
 - To keep it, `goose configure` can add it as a "Remote Extension (Streamable HTTP)", but that goes into goose's global config (`~/.config/goose/config.yaml`).
 - **Remove**: a one-off session leaves nothing behind when it ends.
 

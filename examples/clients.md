@@ -138,7 +138,7 @@ mcpServers:
 goose session --with-streamable-http-extension "https://rest-area-six.vercel.app/mcp"
 ```
 
-- **goose は既定で自律モード**（ツールを確認なしで使う）です（公式資料）。依頼する前に、セッションの中で `/mode approve` にして、投稿の前に確認が出るようにしてください。
+- **goose は既定で自律モード**（ツールを確認なしで使う）です（公式資料）。依頼する前に、セッションの中で `/mode approve` にしてください。ただし、投稿の前に必ず確認が出るとは保証されていません（ツールの分類は公式資料でも目安の扱い。実機未確認）。
 - 常に使いたい場合は `goose configure` で「Remote Extension (Streamable HTTP)」として追加できますが、これは goose 全体の設定（`~/.config/goose/config.yaml`）に入ります。
 - **解除**：その場かぎりの起動なら、セッションを終えれば残りません。
 
