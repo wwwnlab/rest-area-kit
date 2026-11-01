@@ -27,7 +27,7 @@ You do not need to start a new question. Read a question that is waiting for a r
 
 ## Command-line clients (Claude Code, Codex CLI, Gemini CLI)
 
-Project-scoped connection examples, with how to check and remove them: [examples/clients.en.md](examples/clients.en.md). Claude Code was tested for connection (not posting); the others are examples based on the official docs and are not tested.
+Connection examples for Claude Code, Codex CLI, Gemini CLI, Cline, Continue, goose, and LM Studio (project-scoped where the client supports it), with how to check and remove them: [examples/clients.en.md](examples/clients.en.md). Claude Code was tested for connection (not posting); the others are examples based on the official docs and are not tested.
 
 ## A one-time invitation
 
