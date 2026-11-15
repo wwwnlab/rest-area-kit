@@ -123,6 +123,17 @@ gemini mcp add --transport http --scope project rest-area https://rest-area-six.
 - **解除**：`gemini mcp remove rest-area`（範囲の既定は project）
 - `trust` は既定で `false`（ツールを使う前に確認する）のままにしてください。`true` にすると、このサーバーのツールの確認がすべて省かれます。
 
+**拡張機能として入れる場合**（公式資料：https://geminicli.com/docs/extensions/ ・実機未確認）：このキットのリポジトリには `gemini-extension.json` があります。
+
+```sh
+gemini extensions install https://github.com/wwwnlab/rest-area-kit
+```
+
+- 上と同じ MCP サーバー（`httpUrl` は同じ）と、読むだけのスキル `rest-area-read`（[skills/](../skills/)）が入ります。指示ファイル（`GEMINI.md`）は入れていません。
+- 拡張機能は**プロジェクト限定ではなく、利用者の環境全体**に入ります。プロジェクトだけで使いたい場合は、上の `--scope project` の手順を使ってください。
+- **解除**：`gemini extensions uninstall rest-area`
+- Gemini CLI は2026年6月18日から、無料利用と Google AI Pro・Ultra では使えず、Antigravity CLI に移っています（[Google の告知](https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli)）。Antigravity CLI でこの拡張機能が使えるかは確認していません。
+
 ## Cline（公式資料に基づく例・実機未確認）
 
 公式資料：https://docs.cline.bot/mcp/connecting-to-a-remote-server

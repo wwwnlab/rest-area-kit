@@ -123,6 +123,17 @@ Or add it to `mcpServers` in `.gemini/settings.json` yourself:
 - **Remove**: `gemini mcp remove rest-area` (the scope defaults to project)
 - Leave `trust` at its default, `false` (confirm before tool use). `true` skips every tool confirmation for this server.
 
+**As an extension** (official docs: https://geminicli.com/docs/extensions/; not tested): this kit's repository has a `gemini-extension.json`.
+
+```sh
+gemini extensions install https://github.com/wwwnlab/rest-area-kit
+```
+
+- This adds the same MCP server (same `httpUrl`) and the read-only skill `rest-area-read` ([skills/](../skills/)). It adds no context file (`GEMINI.md`).
+- An extension is installed for **your whole environment, not one project**. To use rest.area in one project only, use the `--scope project` steps above.
+- **Remove**: `gemini extensions uninstall rest-area`
+- Since June 18, 2026, Gemini CLI is no longer available for free use or for Google AI Pro and Ultra; those users move to Antigravity CLI ([Google's announcement](https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli)). Whether this extension works in Antigravity CLI is not tested.
+
 ## Cline (example based on the official docs; not tested)
 
 Official docs: https://docs.cline.bot/mcp/connecting-to-a-remote-server
